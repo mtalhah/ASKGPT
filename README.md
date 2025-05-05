@@ -1,33 +1,57 @@
-INTRODUCING ASK GPT !!
+🚀 INTRODUCING ASK GPT
+A smarter way to visualize ChatGPT responses
 
-This project aims to visualise the responses 
-received form chatGPT , making the responses
-more data centric and easier to draw conclusions
-from .
+🧠 Overview
+Ask GPT is an interactive application that visualizes responses from ChatGPT, transforming them into a more data-centric, insightful, and easy-to-understand format. The application highlights key topics, relevance, sentiment, and even provides voice narration of the results.
 
-STEPS TO INITIALIZE 
+⚙️ Setup Instructions
+🔑 API Key
+To use this application, you need an active OpenAI API key.
+👉 Open GPT_func.py and add your API key in the specified section.
 
-1. API KEY : the use of this application requires
-an active openai API key, modify GPT_func.py to
-specify API key
+🏁 Run the Application
+The main file is QT7.py.
 
-2. MAIN : QT7.py is the main file, run QT7.py
+bash
+Copy
+Edit
+python QT7.py
+💬 How to Use
+Enter your prompt in the input field.
 
-3. PROMPT: enter your prompt and click search button
-to receive full response , knowledge graph of the response
-, sentiment analysis and relevance analysis .
-voice narration can be avtivated using the speaker button
+Click the 🔍 Search button to:
 
+Receive a full GPT response
 
-ABOUT THE APPLICATION 
+View an interactive knowledge graph
 
-The application takes in a user query and analyses the response from chatgpt , 
-the SciTopic.py module is used to retrieve "topics" from the initial response from chatGPT using language processing concepts.
-Then the "topics" are sent as queries and their responses are compiled to create a knowledge base. 
-this knowledge base is them summarised to be displayed as "description".
-To visualize the data we use the pyvis_kg.py , which uses the json response from chatGPT to structure the knowledge graph. The knowledge graph is interactive , as in hovering over it would display a short description , it contains nodes and edges describing the relationship between each topic .
-to display the knowledge graph we use nx.html and dsplay it in webview.
+Get sentiment analysis and relevance analysis
 
-Then the we perform sentiment and relevance analysis on the knowledge base and use radar charts to display sentiment and relevance , we use a scoring system to represent this data , which can be found in sentiment_scores.py and relevance_scores.py
+Click the 🔊 Speaker button to enable voice narration of the response.
 
+📚 About the Application
+The app receives a user query and fetches a response using ChatGPT.
 
+The SciTopic.py module extracts key topics from the response using NLP techniques.
+
+Each topic is then queried to build a mini knowledge base, which is summarized and displayed as a concise description.
+
+pyvis_kg.py uses ChatGPT’s JSON responses to generate an interactive knowledge graph using PyVis:
+
+🟢 Nodes represent key topics
+
+🔗 Edges represent relationships between them
+
+🖱️ Hovering displays brief topic descriptions
+
+The graph is shown in a WebView using nx.html
+
+📊 Analysis Features
+Sentiment Analysis
+Displays sentiment scores via radar charts using sentiment_scores.py
+
+Relevance Analysis
+Scores topic relevance and visualizes it with radar charts using relevance_scores.py
+
+Feel free to contribute, raise issues, or suggest improvements! ✨
+Happy exploring with Ask GPT!
